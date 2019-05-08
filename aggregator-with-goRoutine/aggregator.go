@@ -1,3 +1,7 @@
+/*
+	This program fetches sitemap from nytimes And Futher looks for latest news from various sections
+*/
+
 package main
 
 import (
@@ -93,7 +97,7 @@ func newsAggHandler(w http.ResponseWriter, r *http.Request) {
 	news_map := make(map[string]NewsMap)
 	xml.Unmarshal(nytimesXML, &s) //Unmarshalling the data <created> similar to GET response
 
-	queue := make(chan News, 30)	// Creating a channel buffer of length 30 to hold the outputs from different goRoutines
+	queue := make(chan News, 30) // Creating a channel buffer of length 30 to hold the outputs from different goRoutines
 
 	for _, Location := range s.Locations {
 		wg.Add(1)
