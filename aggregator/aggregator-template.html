@@ -1,0 +1,17 @@
+<!Doctype html>
+<h1>{{.Title}}</h1>
+
+<table>
+    <thead>
+        <th> Title </th>
+        <th> Description </th>
+    </thead>
+    <tbody>
+        {{ range $key, $value := .News}}
+        <tr>
+            <td><a href="{{ $value.Link }}" target="_blank">{{ $key }}</a></td>
+            <td>{{ $value.Description }}</td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>
