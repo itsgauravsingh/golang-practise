@@ -1,7 +1,7 @@
 # golang-practise
 Golang practise code
 
-1. <b> Aggregator </b> 
+1. <b> Aggregator </b> <br/>
 <a href="https://github.com/itsgauravsingh/golang-practise/tree/master/aggregator">Aggregator</a> contains files that provides the feature of news aggregator.
 Fetches news data from <a href="https://www.nytimes.com/" target="_blank">nytimes</a> and shows the top news.
 
